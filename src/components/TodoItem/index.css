@@ -1,0 +1,27 @@
+.heading-item {
+  font-size: 25px;
+  font-family: Roboto;
+  color: #000000;
+}
+.bg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 15px;
+  color: #ff0b37;
+  border-radius: 5px;
+  font-family: Roboto;
+  border-color: #ff0b37;
+  border-style: solid;
+  width: 120px;
+  text-align:center;
+  padding:10px;
+  height:40px;
+  margin-top:30px;
+  background-color: #ffffff;
+  font-size: 20px;
+}

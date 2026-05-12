@@ -1,0 +1,26 @@
+.heading-item {
+  color: #000000;
+}
+.bg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.heading-container {
+  color: #ff8542;
+  font-family: Roboto;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 100px;
+}
+.bg-container-style {
+  background-color: #ffc2a0;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom:20px;
+}
+.container-bg-style {
+  background-color: #ffffff;
+  height: auto;
+  margin: 50px;
+}
