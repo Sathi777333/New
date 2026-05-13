@@ -1,7 +1,9 @@
-.heading-item {
-  font-size: 25px;
+.heading {
+  font-size: 27px;
   font-family: Roboto;
   color: #000000;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 .bg-container {
   display: flex;
@@ -10,18 +12,70 @@
   margin-right: 40px;
   margin-bottom: 20px;
 }
+.btn-edit-button {
+  color: #0b64ff;
+  border-radius: 5px;
+  font-family: Roboto;
+  border-color: #00d7d0;
+  border-style: solid;
+  width: 120px;
+  text-align: center;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.display-view-input {
+  width: 500px;
+}
+.btn-save-button {
+  color: #0be7ff;
+  border-radius: 5px;
+  font-family: Roboto;
+  border-color: #270bff;
+  border-style: solid;
+  width: 120px;
+  text-align: center;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
 .btn {
-  padding: 15px;
   color: #ff0b37;
   border-radius: 5px;
   font-family: Roboto;
   border-color: #ff0b37;
   border-style: solid;
   width: 120px;
-  text-align:center;
-  padding:10px;
-  height:40px;
-  margin-top:30px;
+  text-align: center;
+  height: 40px;
   background-color: #ffffff;
   font-size: 20px;
+  margin-bottom: 20px;
+}
+.input-heading {
+  width: 400px;
+  border: 1px solid transparent;
+  height: 27px;
+  border-radius: 4px;
+  background-color: rgb(232, 232, 232);
+  border-color: transparent;
+}
+.display-view-input {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.label {
+  padding-right: 30px;
+}
+
+span {
+  margin-left: 10px;
 }

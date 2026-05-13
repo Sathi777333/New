@@ -1,6 +1,3 @@
-.heading-item {
-  color: #000000;
-}
 .bg-container {
   display: flex;
   flex-direction: row;
@@ -17,10 +14,29 @@
   background-color: #ffc2a0;
   height: auto;
   border-radius: 15px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 .container-bg-style {
   background-color: #ffffff;
   height: auto;
   margin: 50px;
+}
+.adding-input-items {
+  height: 40px;
+  width: 400px;
+  margin-left: 45px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-family: bref serif;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.add-button {
+  height: 40px;
+  margin-left: 10px;
+  width: 70px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid transparent;
 }

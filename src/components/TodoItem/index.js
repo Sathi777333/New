@@ -28,15 +28,27 @@ const TodoItem = ({userDetails, listDelete, onEditedItems}) => {
     <li className="bg-container">
       {edit ? (
         <>
-          <input type="text" value={newItems} onChange={onChangeItems} />
-          <button type="button" className="btn" onClick={onSave}>
+          <div className="display-view-input">
+            <input
+              className="input-heading"
+              type="text"
+              value={newItems}
+              onChange={onChangeItems}
+            />
+          </div>
+          <button type="button" className="btn-save-button" onClick={onSave}>
             Save
           </button>
         </>
       ) : (
         <>
-          <p className="heading-item">{title}</p>
-          <button type="button" className="btn" onClick={onEdit}>
+          <div className="display-view-input">
+            <label className="label">
+              <input type="checkbox" className="heading" value={title} />
+              <span>{title}</span>
+            </label>
+          </div>
+          <button type="button" className="btn-edit-button" onClick={onEdit}>
             Edit
           </button>
         </>

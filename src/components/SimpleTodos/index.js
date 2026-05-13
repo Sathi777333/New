@@ -54,6 +54,7 @@ class App extends Component {
   onSubmitList = event => {
     event.preventDefault()
     const {addedList, userListDetails} = this.state
+    if (addedList.trim() === '') return
     const newItems = {
       id: userListDetails.length + 1,
       title: addedList,
@@ -79,8 +80,14 @@ class App extends Component {
         <div className="bg-container-style">
           <h1 className="heading-container">Simple Todos</h1>
           <form onSubmit={this.onSubmitList}>
-            <input value={addedList} onChange={this.onChangeList} />
-            <button type="submit">Add</button>
+            <input
+              value={addedList}
+              className="adding-input-items"
+              onChange={this.onChangeList}
+            />
+            <button className="add-button" type="submit">
+              Add
+            </button>
           </form>
           <ul>
             {userListDetails.map(eachItem => (
