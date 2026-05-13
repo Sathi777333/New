@@ -38,7 +38,7 @@ const initialTodosList = [
 ]
 
 class App extends Component {
-  state = {userListDetails: initialTodosList}
+  state = {userListDetails: initialTodosList, addedList: ''}
 
   listDelete = id => {
     const {userListDetails} = this.state
@@ -47,18 +47,48 @@ class App extends Component {
     this.setState({userListDetails: filterList})
   }
 
+  onChangeList = event => {
+    this.setState({addedList: event.target.value})
+  }
+
+  onSubmitList = event => {
+    event.preventDefault()
+    const {addedList, userListDetails} = this.state
+    const newItems = {
+      id: userListDetails.length + 1,
+      title: addedList,
+    }
+    this.setState(prevState => ({
+      userListDetails: [...prevState.userListDetails, newItems],
+      addedList: '',
+    }))
+  }
+
+  onEditedItems = (id, newItems) => {
+    this.setState(prevState => ({
+      userListDetails: prevState.userListDetails.map(each =>
+        each.id === id ? {...each, title: newItems} : each,
+      ),
+    }))
+  }
+
   render() {
-    const {userListDetails} = this.state
+    const {userListDetails, addedList} = this.state
     return (
       <div className="container-bg-style">
         <div className="bg-container-style">
           <h1 className="heading-container">Simple Todos</h1>
+          <form onSubmit={this.onSubmitList}>
+            <input value={addedList} onChange={this.onChangeList} />
+            <button type="submit">Add</button>
+          </form>
           <ul>
             {userListDetails.map(eachItem => (
               <TodoItem
                 userDetails={eachItem}
                 key={eachItem.id}
                 listDelete={this.listDelete}
+                onEditedItems={this.onEditedItems}
               />
             ))}
           </ul>
